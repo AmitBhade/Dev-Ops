@@ -1,0 +1,17 @@
+
+2. Kubernetes Services yml file (Nodeport)
+
+apiVersion: v1
+kind: Service
+metadata:
+   name: mynodeportservice
+spec:
+  type: Loadbalancer
+  selector:
+      app: myapp
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+      
+
